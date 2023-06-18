@@ -1,0 +1,387 @@
+.faq {
+  margin-bottom: 100px;
+}
+
+.slider2__h2 {
+  margin-bottom: 50px;
+}
+
+.slider2 {
+  margin-bottom: 100px;
+}
+
+.slider2__list {
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.slider2__item:not(:last-child) {
+  margin-right: 85px;
+}
+
+.slider2__switch {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  transition: color .15s ease-in-out;
+}
+
+.slider2__switch:focus {
+  outline-offset: 3px;
+  outline: 2px solid var(--color-orange);
+}
+
+.slider2__switch:hover {
+  color: var(--color-orange);
+}
+
+.slider2__switch:active {
+  color: var(--color-red);
+}
+
+.slider2__h3 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.slider2__descr {
+  margin: 0;
+  margin-bottom: 18px;
+  width: 43%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.slider2__btn {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  transition-property: background-color, border-color, color;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn-1 {
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  margin-right: 28px;
+}
+
+.btn-1:focus {
+  background-color: var(--color-l-orange);
+  outline: none;
+}
+
+.btn-1:hover {
+  background-color: var(--color-l-orange);
+}
+
+.btn-1:active {
+  background-color: var(--color-red);
+}
+
+.btn-2 {
+  padding: 18.5px 38px 18.5px 38px;
+  border: 1px solid var(--color-black);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.btn-2:focus {
+  background-color: var(--color-grey3);
+  border-color: var(--color-grey3);
+  color: var(--color-white);
+  outline: none;
+}
+
+.btn-2:hover {
+  background-color: var(--color-grey3);
+  border-color: var(--color-grey3);
+  color: var(--color-white);
+}
+
+.btn-2:active {
+  background-color: var(--color-black);
+}
+
+.slider2__switch--active {
+  color: var(--color-red);
+}
+
+.tab-item {
+  position: relative;
+  display: none;
+}
+
+.tab-item--active {
+  display: block;
+}
+
+/* как-то можно это записать через общий tab-item::after, а потом выбирать каскадом например нужный ::after и задавать ему bg-image? либо на псевдоэлементы селекторы :is :where и :has, и каскадность, не работают, либо я писал что-то неправильно  */
+.slider2__tab1::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 49.2%;
+  height: calc(100% - 10px);
+  transform: translateY(10px);
+  background-image: url('../img/slider2-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+}
+
+.slider2__tab2::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 49.2%;
+  height: calc(100% - 10px);
+  transform: translateY(10px);
+  background-image: url('../img/slider2-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+}
+
+.slider2__tab3::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 49.2%;
+  height: calc(100% - 10px);
+  transform: translateY(10px);
+  background-image: url('../img/slider2-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+}
+
+.slider2__tab4::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 49.2%;
+  height: calc(100% - 10px);
+  transform: translateY(10px);
+  background-image: url('../img/slider2-4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+}
+
+@media (max-width: 1024px) {
+  .slider2 {
+    margin-bottom: 69px;
+  }
+
+  .slider2__list {
+    margin-bottom: 50px;
+  }
+
+  .slider2__descr {
+    width: calc((100% - 50px) / 2);
+    margin-bottom: 24px;
+  }
+
+  .slider2__tab1::after {
+    width: calc((100% - 50px) / 2);
+    background-image: url('../img/slider2-1.1024.jpg');
+    background-position: center;
+  }
+
+  .slider2__tab2::after {
+    width: calc((100% - 50px) / 2);
+    background-image: url('../img/slider2-2.1024.jpg');
+    background-position: center;
+  }
+
+  .slider2__tab3::after {
+    width: calc((100% - 50px) / 2);
+    background-image: url('../img/slider2-3.1024.jpg');
+    background-position: center;
+  }
+
+  .slider2__tab4::after {
+    width: calc((100% - 50px) / 2);
+    background-image: url('../img/slider2-4.1024.jpg');
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider2 {
+    margin-bottom: 37px;
+  }
+
+  .slider2__list {
+    width: 100%;
+    margin-bottom: 372px;
+  }
+
+  .slider2__item:not(:nth-child(4n)) {
+    margin-right: 155px;
+  }
+
+  .slider2__item:nth-child(4n),
+  .slider2__item:last-child {
+    margin: 0;
+  }
+
+  .slider2__descr {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .slider2__tab1::after {
+    width: 100%;
+    height: 284px;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(-100% - 38px));
+    background-image: url('../img/slider2-1.768.jpg');
+  }
+
+  .slider2__tab2::after {
+    width: 100%;
+    height: 284px;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(-100% - 38px));
+    background-image: url('../img/slider2-2.768.jpg');
+  }
+
+  .slider2__tab3::after {
+    width: 100%;
+    height: 284px;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(-100% - 38px));
+    background-image: url('../img/slider2-3.768.jpg');
+  }
+
+  .slider2__tab4::after {
+    width: 100%;
+    height: 284px;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(-100% - 38px));
+    background-image: url('../img/slider2-4.768.jpg');
+  }
+}
+
+@media (max-width: 576px) {
+  .slider2 {
+    margin-bottom: 49px;
+  }
+
+  .slider2__h2 {
+    margin-bottom: 21px;
+  }
+
+  .slider2__list {
+    width: 100%;
+    margin-bottom: 192px;
+  }
+
+  .slider2__item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .slider2__item:not(:nth-child(4n)) {
+    margin-right: 44px;
+  }
+
+  .slider2__item:nth-child(4n),
+  .slider2__item:last-child {
+    margin: 0;
+  }
+
+  .slider2__tab1::after {
+    width: 100%;
+    height: 160px;
+    border-radius: 16px;
+    transform: translateY(calc(-100% - 16px));
+    background-image: url('../img/slider2-1.320.jpg');
+  }
+
+  .slider2__tab2::after {
+    width: 100%;
+    height: 160px;
+    border-radius: 16px;
+    transform: translateY(calc(-100% - 16px));
+    background-image: url('../img/slider2-2.320.jpg');
+  }
+
+  .slider2__tab3::after {
+    width: 100%;
+    height: 160px;
+    border-radius: 16px;
+    transform: translateY(calc(-100% - 16px));
+    background-image: url('../img/slider2-3.320.jpg');
+  }
+
+  .slider2__tab4::after {
+    width: 100%;
+    height: 160px;
+    border-radius: 16px;
+    transform: translateY(calc(-100% - 16px));
+    background-image: url('../img/slider2-4.320.jpg');
+  }
+
+  .slider2__h3 {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .slider2__descr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .slider2__btn-block {
+    max-width: 320px;
+    justify-content: space-between;
+  }
+
+  .slider2__btn {
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .btn-1 {
+    margin-right: 0;
+    padding: 12px 44px;
+  }
+
+  .btn-2 {
+    padding: 11px 31px;
+  }
+}

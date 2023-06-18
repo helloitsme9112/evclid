@@ -1,0 +1,182 @@
+.faq__h2 {
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 11px 0 0;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color-grey1);
+  transition-property: border-color;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+
+}
+
+.faq__item:first-child {
+  border-top: 1px solid var(--color-grey1);
+}
+
+.faq__item:not(:first-child) {
+  border-top: 1px solid transparent;
+  margin-top: -1px;
+}
+
+.faq__btn {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  padding: 39px 65px 39px 0;
+  /* border-bottom: 1px solid var(--color-grey1); */
+  border-radius: 0;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: left;
+  transition-property: color, border-color, background-image;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
+.faq__item:hover {
+  border-color: var(--color-orange);
+}
+
+.faq__item:hover .faq__btn{
+  color: var(--color-orange);
+}
+
+.faq__item:focus-within {
+  border-color: var(--color-orange);
+}
+
+.faq__item:focus-within .faq__btn {
+  outline: none;
+  color: var(--color-orange);
+}
+
+.faq__item:active {
+  color: var(--color-black);
+  border-color: var(--color-grey1);
+}
+
+.faq__item:active .faq__btn {
+  color: var(--color-black);
+}
+
+.faq__btn::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23CACACA'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='black'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: background-image .15s ease-in-out, transform .3s ease-in-out;
+}
+
+.faq__btn:hover::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23FF9900'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.faq__item:focus-within .faq__btn::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23FF9900'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.accordion--active .faq__btn::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23CACACA'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='black'/%3E%3C/svg%3E%0A");
+  transform: rotate(45deg) translate(-35.5%, -35.5%);
+}
+
+/* как снять автоматически убрать фокус с faq__item после раскрытия аккордеона? и нужно ли?  */
+
+.accordion__descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.accordion__descr:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.accordion__descr:last-child {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+  .faq {
+    margin-bottom: 80px;
+  }
+
+  .faq__item:nth-child(2) .faq__btn {
+    padding-block: 30px;
+  }
+
+  .faq__item:nth-child(4) .faq__btn {
+    padding-block: 30px;
+  }
+
+  .faq__span {
+    display: block;
+    max-width: 756px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq {
+    margin-bottom: 111px;
+  }
+
+  .faq__item:not(:first-child) .faq__btn {
+    padding-block: 30px;
+  }
+
+  .faq__span {
+    display: block;
+    max-width: 570px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq {
+    margin-bottom: 60px;
+  }
+
+  .faq__h2 {
+    margin-bottom: 16px;
+  }
+
+  .faq__span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .faq__btn::after {
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23CACACA'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='black'/%3E%3C/svg%3E%0A");
+  }
+
+  .faq__btn:hover::after,
+  .faq__item:focus-within .faq__btn::after {
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23FF9900'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='white'/%3E%3C/svg%3E");
+  }
+
+  .accordion--active .faq__btn::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23CACACA'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='black'/%3E%3C/svg%3E%0A");
+    transform: rotate(45deg) translate(-35.5%, -35.5%);
+  }
+
+  .faq__btn {
+    padding: 30px 40px 30px 0;
+  }
+}
